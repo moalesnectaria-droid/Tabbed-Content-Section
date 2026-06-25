@@ -1,0 +1,104 @@
+/* reset simple */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+}
+
+/* card main */
+.container {
+    background: white;
+    width: 700px;
+    max-width: 90%;
+
+    padding: 40px;
+
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+/* buttons zone */
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+
+    margin-bottom: 30px;
+
+    flex-wrap: wrap;
+}
+
+/* button */
+.tab-btn {
+    padding: 12px 20px;
+
+    border: none;
+    border-radius: 10px;
+
+    background-color: #e5e5e5;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    transition: 0.3s;
+}
+
+/* effect hover */
+.tab-btn:hover {
+    background-color: #d4d4d4;
+}
+
+/* active tab */
+.tab-btn.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* hidden content */
+.tab-content {
+    display: none;
+
+    padding: 25px;
+
+    background-color: #f8f8f8;
+    border-radius: 12px;
+
+    animation: fade 0.4s;
+}
+
+/* active content */
+.tab-content.active {
+    display: block;
+}
+
+/* margin */
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
